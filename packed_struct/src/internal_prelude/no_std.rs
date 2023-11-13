@@ -14,8 +14,12 @@ pub use core::intrinsics::write_bytes;
 pub use core::ops::Deref;
 pub use core::slice;
 pub use core::hash::{Hash, Hasher};
+#[cfg(not(feature="alloc"))]
+pub use core::fmt::Formatter;
 
 #[cfg(feature="alloc")]
 pub use alloc::vec::Vec;
 #[cfg(feature="alloc")]
 pub use alloc::borrow::Cow;
+#[cfg(feature="alloc")]
+pub use alloc::fmt::Formatter;
