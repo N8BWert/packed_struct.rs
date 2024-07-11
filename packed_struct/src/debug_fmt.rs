@@ -1,6 +1,7 @@
 //! Helper structures for runtime packing visualization.
 
 use crate::internal_prelude::v1::*;
+use core::fmt::Formatter;
 
 #[cfg(any(feature="alloc", feature="std"))]
 pub trait PackedStructDebug {
